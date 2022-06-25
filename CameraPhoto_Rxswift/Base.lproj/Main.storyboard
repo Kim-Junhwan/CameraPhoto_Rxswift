@@ -22,21 +22,24 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="672"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itQ-9n-Gdd">
-                                <rect key="frame" x="158.5" y="789" width="97.5" height="31"/>
+                                <rect key="frame" x="158.5" y="821" width="97.5" height="31"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" red="1" green="0.95367172430000002" blue="0.99339339260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSQ-r5-GeA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="itQ-9n-Gdd" firstAttribute="top" secondItem="YhK-kd-efl" secondAttribute="bottom" constant="29" id="3il-X2-1MQ"/>
                             <constraint firstItem="itQ-9n-Gdd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aNs-Zg-3KV"/>
                             <constraint firstItem="YhK-kd-efl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="e2M-Ja-cou"/>
                             <constraint firstItem="YhK-kd-efl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jNW-hZ-5Uc"/>
                             <constraint firstItem="YhK-kd-efl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="jsQ-kE-CVQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="itQ-9n-Gdd" secondAttribute="bottom" constant="10" id="qHd-qt-WUB"/>
                             <constraint firstItem="YhK-kd-efl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z80-DL-fTs"/>
                         </constraints>
                     </view>
@@ -48,6 +51,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="applyFilterButton" destination="itQ-9n-Gdd" id="LMT-xz-sD0"/>
                         <outlet property="photoImageView" destination="YhK-kd-efl" id="LNl-Bw-ey1"/>
                     </connections>
                 </viewController>
